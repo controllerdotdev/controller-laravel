@@ -1,0 +1,39 @@
+{
+    "name": "controller/controller-laravel",
+    "description": "Error tracking package for Laravel applications",
+    "version": "1.0.0",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "pestphp/pest": "^1.23",
+        "mockery/mockery": "^1.6",
+        "laravel/framework": "^6.0 | ^7.0 | ^8.0 | ^9.0 | ^10.0 | ^11.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Controller\\ControllerServiceProvider"
+            ],
+            "aliases": {
+                "Controller": "Controller\\Facades\\Controller"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
